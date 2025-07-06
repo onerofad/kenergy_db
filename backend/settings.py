@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-+-+6x$a8_$^@-r=tz96+3ycbal@^-0#*4xn@5koiexokr48qgv
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app', '.now.sh', '127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['.vercel.app', '.now.sh', '127.0.0.1', 'localhost', 'https://kenergy.vercel.app']
 
 
 # Application definition
@@ -139,7 +139,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ORIGIN_WHITELIST = [
-    'http://localhost:3000'
+    'http://localhost:3000',
+    'https://kenergy.vercel.app'
 ]
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
