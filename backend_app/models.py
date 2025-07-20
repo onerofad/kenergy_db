@@ -39,6 +39,8 @@ class Sales(models.Model):
     qty = models.FloatField()
     price = models.FloatField()
     total = models.FloatField()
+    amount = models.FloatField(default=0)
+    mop = models.CharField(max_length=255, default="")
     date = models.DateField(auto_now_add=True)
 
     def __str__(self):
