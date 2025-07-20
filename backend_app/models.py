@@ -27,6 +27,7 @@ class Inventory(models.Model):
     supplier = models.TextField()
     qty = models.IntegerField()
     cost = models.FloatField()
+    selling = models.FloatField(default=0)
     date = models.CharField(max_length=255)
     staff = models.CharField(max_length=255)
 
