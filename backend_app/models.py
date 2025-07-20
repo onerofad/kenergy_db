@@ -54,7 +54,7 @@ class Expense(models.Model):
     
 class Price(models.Model):
     itemname = models.CharField()
-    price = models.FloatField
+    price = models.FloatField(default=0)
 
     def __str__(self):
         return self.itemname
