@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import RegisterUser, Item, Suppliers, Inventory, Sales, Expense
+from .models import RegisterUser, Item, Suppliers, Inventory, Sales, Expense, Price
 
 class ReisterUserSerializer(serializers.ModelSerializer):
     class Meta:
@@ -35,3 +35,8 @@ class ExpenseTodaySerializer(serializers.ModelSerializer):
     class Meta:
         fields = '__all__'
         model = Expense
+
+class PriceSerializer(serializers.ModelSerializer):
+    class Meta:
+        fields = '__all__'
+        model = Price

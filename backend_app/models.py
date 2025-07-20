@@ -51,3 +51,10 @@ class Expense(models.Model):
 
     def __str__(self):
         return self.expensename
+    
+class Price(models.Model):
+    itemname = models.CharField()
+    price = models.FloatField
+
+    def __str__(self):
+        return self.itemname

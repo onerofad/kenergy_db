@@ -18,7 +18,7 @@ from django.contrib import admin
 from django.urls import path, include
 
 from rest_framework import routers
-from backend_app.views import RegisterUserView, ItemView, SupplierView, InventoryView, SalesView, SalesViewToday, ExpenseView, ExpenseTodayView
+from backend_app.views import RegisterUserView, ItemView, SupplierView, InventoryView, SalesView, SalesViewToday, ExpenseView, ExpenseTodayView, PriceView
 
 router = routers.DefaultRouter()
 router.register('registerusers', RegisterUserView, 'registeruser')
@@ -29,7 +29,7 @@ router.register('sales', SalesView, 'sale')
 router.register('sales_today', SalesViewToday, 'sale_today')
 router.register('expenses', ExpenseView, 'expense')
 router.register('expenses_today', ExpenseTodayView, 'expense_today')
-
+router.register('prices', PriceView, 'price')
 
 urlpatterns = [
     path('admin/', admin.site.urls),

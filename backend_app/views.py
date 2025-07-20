@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from rest_framework import viewsets
-from .models import RegisterUser, Item, Suppliers, Inventory, Sales, Expense
-from .serializer import ReisterUserSerializer, ItemSerializer, SupplierSerializer, InventorySerializer, SaleSerializer, ExpenseSerializer, ExpenseTodaySerializer
+from .models import RegisterUser, Item, Suppliers, Inventory, Sales, Expense, Price
+from .serializer import ReisterUserSerializer, ItemSerializer, SupplierSerializer, InventorySerializer, SaleSerializer, ExpenseSerializer, ExpenseTodaySerializer, PriceSerializer
 from datetime import date
 
 class RegisterUserView(viewsets.ModelViewSet):
@@ -35,6 +35,10 @@ class ExpenseView(viewsets.ModelViewSet):
 class ExpenseTodayView(viewsets.ModelViewSet):
     queryset = Expense.objects.filter(date = date.today())
     serializer_class = ExpenseTodaySerializer
+
+class PriceView(viewsets.ModelViewSet):
+    queryset = Price.objects.all()
+    serializer_class = PriceSerializer
 
 
 
